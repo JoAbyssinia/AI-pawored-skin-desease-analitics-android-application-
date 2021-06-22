@@ -29,8 +29,8 @@ import java.util.UUID;
 
 
 public class ImageClassifier extends AsyncTask<String, Void, String> {
-    private static final String API_KEY = "F7B5CFF4B8FA9B2B6AAC35DA3ACF063D";
-    private final String PredictionKey = "60941945d194491c8c5bf7ca577b2b7e";
+    private static final String API_KEY = "API_key here";
+    private final String PredictionKey = "prediction key here";
     private final String endpoint = "https://cogentiveservicetest.cognitiveservices.azure.com/";
     ByteArrayInputStream stream;
     TextView pridiction, recommendation, confidence;
@@ -66,8 +66,8 @@ public class ImageClassifier extends AsyncTask<String, Void, String> {
     protected String doInBackground(String... strings) {
 
         try {
-            String iteration = "skinDiseaseIteration";
-            String projectId = "fb943fcf-0d7b-4120-b603-b5187aace5a5";
+            String iteration = "interaction name here";
+            String projectId = "project Id here";
 //            testProject(predictor, projectId, context, iteration,stream);
 
             byte[] image = this.read(stream);
@@ -125,7 +125,7 @@ public class ImageClassifier extends AsyncTask<String, Void, String> {
         dialog.setMessage("Recommendation...");
 
         RequestQueue queue = Volley.newRequestQueue(context);
-        String url = "https://azuresearchforjihn.search.windows.net/indexes/azureblob-index/docs?api-version=2020-06-30&search=" + searchKey;
+        String url = "azure search url here" + searchKey;
         StringRequest getRequest = new StringRequest(Request.Method.GET, url,
                 new Response.Listener<String>() {
                     @Override
